@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require_once 'sections/header.php' ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notes</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
     <div class="container-fluid min-vh-100 d-flex flex-column">
         <div class="row flex-grow-1">
             <div class="col-lg-2 col-md-3 sidebar">
@@ -65,12 +53,4 @@
             </div>
         </div>
     </div>
-
-
-    <script src="scripts/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
-        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
-</html>
+<?php require_once 'sections/footer.php' ?>
