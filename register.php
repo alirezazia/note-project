@@ -20,12 +20,15 @@
                         <div class="box notes shadow-md">
                             <h2><i class="fas fa-user"></i>ساخت حساب جدید</h2>
                             <hr>
-                            <form action="" class="text-center">
-                                <input type="text" class="form-control w-75 mx-auto" placeholder="نام شما">
-                                <input type="text" class="form-control w-75 mx-auto mt-2" placeholder="نام کاربری">
-                                <input type="password" class="form-control w-75 mx-auto mt-2" placeholder="کلمه عبور">
-                                <input type="password" class="form-control w-75 mx-auto mt-2" placeholder="تکرار کلمه عبور">
-                                <input type="submit" value="ساخت حساب جدید" class="btn btn-success w-75 mt-3">
+                            <?php 
+                                show_message()
+                            ?>
+                            <form action="inc/function.php" method="post" class="text-center">
+                                <input type="text" name="display-name" class="form-control w-75 mx-auto" placeholder="نام شما">
+                                <input type="text" name="username" class="form-control w-75 mx-auto mt-2" autocomplete="off" placeholder="نام کاربری">
+                                <input type="password" name="password" class="form-control w-75 mx-auto mt-2" autocomplete="off" placeholder="کلمه عبور">
+                                <input type="password" name="pass-conf" class="form-control w-75 mx-auto mt-2" placeholder="تکرار کلمه عبور">
+                                <input type="submit" name="do-submit" value="ساخت حساب جدید" class="btn btn-success w-75 mt-3">
                             </form>
                         </div>
                     </div>
