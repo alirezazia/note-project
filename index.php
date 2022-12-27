@@ -1,4 +1,4 @@
-<?php require_once 'sections/header.php' ?>
+<?php require_once 'sections/header.php';check_login() ?>
     <div class="container-fluid min-vh-100 d-flex flex-column">
         <div class="row flex-grow-1">
             <div class="col-lg-2 col-md-3 sidebar">
@@ -10,12 +10,7 @@
                         <input type="text" placeholder="جستجو">
                     </form>
                 </div>
-                <ul id="menu">
-                    <li class="menu-item"><a href="#"><i class="fas fa-home"></i>داشبورد</a></li>
-                    <li class="menu-item"><a href="#"><i class="fas fa-book"></i>یادداشت ها</a></li>
-                    <li class="menu-item"><a href="#"><i class="fas fa-wrench"></i>تنظیمات</a></li>
-                    <li class="menu-item"><a href="#"><i class="fas fa-power-off"></i>خروج</a></li>
-                </ul>
+                <?php require_once 'sections/sidebar-menu.php' ?>
 
                 <div class="upgrade">
                     <a href="#" class=""><i class="fas fa-trophy"></i>خرید نسخه کامل</a>
@@ -44,7 +39,9 @@
                     <div class="col-4">
                         <div class="box quick-access shadow-md">
                             <h2><i class="fas fa-circle-plus"></i>یادداشت سریع</h2>
-                            <textarea name="" id="" class="note" placeholder="بنویسید و enter بزنید ..."></textarea>
+                            <form>
+                                <input name="" id="" class="note" placeholder="بنویسید و enter بزنید ..."/>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -5,10 +5,7 @@
             <div class="col-lg-2 col-md-3 sidebar">
                 <h2 class="logo">یادداشت ها</h2>
                 <div class="devider"></div>
-                <ul id="menu">
-                    <li class="menu-item"><a href="#"><i class="fas fa-home"></i>ورود</a></li>
-                    <li class="menu-item"><a href="#"><i class="fas fa-power-off"></i>ثبت نام</a></li>
-                </ul>
+                <?php require_once 'sections/sidebar-menu.php' ?>
 
             </div>
             <div class="col-lg-10 col-md-9 content g-0">

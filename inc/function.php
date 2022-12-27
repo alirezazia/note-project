@@ -46,3 +46,32 @@ if(isset($_POST['do-submit'])){
 
     
 }
+
+//  LOGIN USER
+if(isset($_POST['do-login'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $check_user = mysqli_query($db,"SELECT * FROM users WHERE username ='$username' AND password = '$password' ");
+    if(mysqli_num_rows($check_user) > 0 ){
+        session_start();
+        $_SESSION['logedin'] = $username;
+        header('Location:../index.php');
+    } else{
+        set_message('کاربری با این نام پیدا نشد');
+        header('Location:../login.php');
+    }
+}
+
+// CHECK LOGIN
+function check_login(){
+    session_start();
+    if(!isset($_SESSION['logedin'])){
+        header('Location:login.php ');
+    }
+}
+
+// DO LOGOUT
+if(isset($_GET['logout'])){
+    session_start();
+    unset($_SESSION['logedin']);
+}
