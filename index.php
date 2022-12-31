@@ -20,7 +20,7 @@
                 <div class="bg">
                     <a class="profile"><i class="fas fa-user"></i>مشاهده پروفایل</a>
                     <div class="titles">
-                        <h1 class="title">سلام مهدی</h1>
+                        <h1 class="title">سلام <?php echo getDisplay_name() ?></h1>
                         <h2 class="title">روزتو برنامه ریزی کن لذت ببر...</h2>
                     </div>
                 </div>

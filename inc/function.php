@@ -106,3 +106,12 @@ function getUser_id(){
     $userArray = mysqli_fetch_array($getUser);
     return $userArray['id'];
 }
+
+// GET DISPALY NAME 
+function getDisplay_name(){
+    $username = $_SESSION['logedin'];
+    global $db;
+    $getUser = mysqli_query($db,"SELECT * FROM users WHERE username = '$username'");
+    $userArray = mysqli_fetch_array($getUser);
+    return $userArray['display_name'];
+}
