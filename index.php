@@ -30,17 +30,19 @@
                         <div class="box notes shadow-md">
                             <h2><i class="fas fa-calendar-day"></i>خلاصه امروز</h2>
                             <ul class="list">
-                                <li>انجام خرید فلان</li>
-                                <li>انجام خرید فلان</li>
-                                <li>انجام خرید فلان</li>
+                                <?php
+                                $notes = getUserNotes(3);
+                                foreach ($notes as $note) { ?>
+                                    <li><?php echo $note[1] ?></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="box quick-access shadow-md">
                             <h2><i class="fas fa-circle-plus"></i>یادداشت سریع</h2>
-                            <form>
-                                <input name="" id="" class="note" placeholder="بنویسید و enter بزنید ..."/>
+                            <form action="inc/function.php" method="POST">
+                                <input name="user-note" id="" class="note" placeholder="بنویسید و enter بزنید ..."/>
                             </form>
                         </div>
                     </div>

@@ -31,11 +31,12 @@
                         <div class="box">
                             <h2><i class="fas fa-calendar-day"></i>همه یادداشت ها</h2>
                             <ul class="list">
-                                <li><a href="#"><i class="fas fa-square-check"></i></a>انجام خرید فلان</li>
-                                <li><a href="#"><i class="fas fa-square-check"></i></a>انجام خرید فلان</li>
-                                <li><a href="#"><i class="fas fa-square-check"></i></a>انجام خرید فلان</li>
-                                <li><a href="#"><i class="fas fa-square-check"></i></a>انجام خرید فلان</li>
-                                <li><a href="#"><i class="fas fa-square-check"></i></a>انجام خرید فلان</li>
+                                <?php
+                                    $notes = getUserNotes();
+                                    foreach($notes as $note){
+                                ?>
+                                    <li><a href="#"><i class="fas fa-square-check"></i></a><?php echo $note[1]; ?></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
